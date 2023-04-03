@@ -62,3 +62,29 @@ grid-template-columns: 50% 1fr 1fr;
 ```
 grid-template-rows: repeat(2, 1fr);
 ```
+
+### Manipulate the grid cell
+
+```
+grid-row-start: 2;
+grid-row-end: 3;
+grid-column-start: 2;
+grid-column-end: 3;
+
+```
+
+---
+
+**_Short hand syntax grid row start line 2 end 3, grid column start line 2 end 3_**
+
+```
+grid-row: 2/3;
+grid-column: 2/3;
+```
+
+**_ Another Short hand _**
+
+```
+//line number to start / column number to start / line where it ends / column where it ends
+grid-area: 1 / 3 / 2 / 4;
+```
