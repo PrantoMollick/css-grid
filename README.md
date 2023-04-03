@@ -32,3 +32,33 @@ grid-template-rows: repeat(2, 150px);
 ```
 grid-template-columns: repeat(2, 150px) 300px;
 ```
+
+### Using fractional unit to occupy rest of space of grid container
+
+```
+grid-template-columns: repeat(2, 150px) 1fr;
+```
+
+### Grid column space with same size (1fr is fraction of available space- we can devide the available space in 3 parts)
+
+```
+grid-template-columns: repeat(3, 1fr);
+```
+
+### Available space is devided by 5 parts where 1fr for the left 3fr for the middle 1fr for the right column
+
+```
+grid-template-columns: 1fr 3fr 1fr;
+```
+
+### % unit are acceptable in grid column it's take 50% for grid container not count gutter size of the grid
+
+```
+grid-template-columns: 50% 1fr 1fr;
+```
+
+### Fractional unit are acceptable in grid row. which is help out to fillout the grid container height
+
+```
+grid-template-rows: repeat(2, 1fr);
+```
