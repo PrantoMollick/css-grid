@@ -2,59 +2,35 @@
   background-color: #eee;
   width: 1000px;
   margin: 30px auto;
-  // height: 1000px;
+
   display: grid;
-  grid-template-rows: repeat(2, 150px);
-  // grid-template-columns: repeat(2, 150px) 1fr;
-  // grid-template-columns: 50% 1fr 1fr;
-  grid-template-columns: repeat(3, 1fr);
-
-  // grid-row-gap: 30px;
-  // grid-column-gap: 30px;
-
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 200px;
   grid-gap: 30px;
-}
 
-.item {
-  padding: 16px;
-  font-size: 25px;
-  font-family: sans-serif;
-  color: white;
-
-  &--1 {
+  &>* {
     background-color: orangered;
-    // grid-row-start: 2;
-    // grid-row-end: 3;
-    // grid-column-start: 2;
-    // grid-column-end: 3;
-
-    grid-row: 2/3;
-    grid-column: 2/3;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
   }
 
-  &--2 {
-    background-color: yellowgreen;
+  .header {
+    grid-column: 1 / -1;
   }
 
-  &--3 {
-    background-color: blueviolet;
+  .sidebar {
+    grid-column: 4 / 5;
+    grid-row: 2 / span 2;
+
   }
 
-  &--4 {
-    background-color: palevioletred;
+  .main-content {
+    grid-column: 1 / span 3;
   }
 
-  &--5 {
-    background-color: royalblue;
-    // grid-row: 1 / 2;
-    // grid-column: 3 / 4;
-    //line number to start/column number to start/ line where it ends / column where it ends
-    grid-area: 1 / 3 / 2 / 4;
+  .footer {
+    grid-column: 1 / -1;
   }
-
-  &--6 {
-    background-color: goldenrod;
-    grid-area: 1 / 2 / 2 / 3;
-  }
-
 }
