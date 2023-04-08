@@ -88,3 +88,65 @@ grid-column: 2/3;
 //line number to start / column number to start / line where it ends / column where it ends
 grid-area: 1 / 3 / 2 / 4;
 ```
+
+### span grid item
+
+```
+grid-column: 1 / span 2;
+```
+
+## Line name grid
+
+```
+display: grid;
+grid-template-rows: [header-start] 100px [header-end box-start] 200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+grid-gap: 30px;
+```
+
+## Line name grid-item
+
+```
+.header {
+  grid-column: col-start 1 / grid-end;
+}
+
+.sidebar {
+  grid-column: 4 / 5;
+  grid-row: box-start / main-end;
+}
+```
+
+## NAME GRID AREAS
+
+```
+  display: grid;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 200px;
+  grid-gap: 30px;
+
+  grid-template-areas: "head head head head"
+    "box box box side"
+    "main main main side"
+    "foot foot foot foot";
+```
+
+### Grid item
+
+```
+  .header {
+    grid-area: head;
+  }
+
+  .sidebar {
+    grid-area: side;
+  }
+
+  .main-content {
+    grid-area: main;
+  }
+
+  .footer {
+    grid-area: foot;
+  }
+```
